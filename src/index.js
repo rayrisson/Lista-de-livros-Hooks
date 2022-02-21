@@ -4,9 +4,11 @@ import './index.css';
 import Home from './pages/Home/Home';
 import reportWebVitals from './reportWebVitals';
 
+const title = process.env.REACT_APP_TITLE;
+
 ReactDOM.render(
   <React.StrictMode>
-    <Home/>
+    <Home title={title}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

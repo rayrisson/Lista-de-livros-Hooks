@@ -6,7 +6,7 @@ import Header from "../../containers/Header/Header";
 import Section from "../../containers/Section/Section";
 import "./Home.css"
 
-const Home = () => {
+const Home = ({title}) => {
     const [bookList, setBookList] = useState([]);
 
     useEffect(() => {
@@ -24,7 +24,7 @@ const Home = () => {
 
     return(
         <div className="Home">
-            <Header title="Lista de livros"/>
+            <Header title={title}/>
             <Section className="SearchSection">
                 <Search searchCallback={fetchData}/>
             </Section>
